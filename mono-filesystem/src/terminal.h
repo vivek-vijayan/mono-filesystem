@@ -24,7 +24,7 @@ enum parser_command
     MKFL, // Make File
     OPEN, // Open File/Directory
     GO,   // Change Directory
-    BACK  // Move to Parent Directory
+    BACK  // Move to Parent Directory 
 };
 
 // Forward declarations of structures
@@ -52,6 +52,7 @@ typedef struct _MONO_UI_TERMINAL_HISTORY _mt_history; // Alias for terminal hist
 void _view_master_mt_history(_mt_history *src);
 bool _erase_master_mt_history(_mt_history *src);
 _mt_history _get_mt_history(_mt_history *src);
+bool _record_master_mt_history(_mt_history *data);
 
 /*
  * Structure for storing the execution details of _MONO_UI_TERMINAL commands
@@ -79,3 +80,4 @@ struct _MONO_UI_TERMINAL_PARSER
 };
 
 #endif // MONO__MONO_UI_TERMINAL
+
